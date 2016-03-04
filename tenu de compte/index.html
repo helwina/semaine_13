@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="app">
+        <div ng-controller="appCtrl">
+            <input ng-model="valeur" placeholder="valeur" />
+            <button ng-click="addDepense()">Ajouter dépense</button>
+            <ul>
+                <li ng-repeat="depense in depenses">
+                    {{ depense.valeur }} <span ng-click="rmDepense($index)">×</span>
+                </li>
+            </ul>
+            <strong>Total des dépenses : {{ total }}</strong>
+        </div>
+    </div>
+
+    <script src="javascript/app.js"></script>
+</body>
+</html>
