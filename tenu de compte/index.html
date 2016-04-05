@@ -12,7 +12,7 @@
             <button ng-click="addDepense()">Ajouter dépense</button>
             <ul>
                 <li ng-repeat="depense in depenses">
-                    {{ depense.valeur }} <span ng-click="rmDepense($index)">×</span>
+                    {{depense.valeur}} <span ng-click="rmDepense($index)">×</span>
                 </li>
             </ul>
             <strong>Total des dépenses : {{ total }}</strong>
